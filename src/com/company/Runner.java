@@ -7,13 +7,15 @@ public class Runner {
         String[] suits = {"Bear","Unicorn","Panda","Koala"};
         int[] pointValue = {1,2,3,4,5,6,7,8,9,10,11,12,13};
 
-        Deck deckTester = new Deck(ranks, suits, pointValue);
+        Deck deck = new Deck(ranks, suits, pointValue);
 
-        deckTester.shuffle();
+        deck.shuffle();
 
-        int deckSize = deckTester.size();
-        for(int i = 0; i < deckSize;i++) {
-            deckTester.deal();
+        int size = deck.size();
+        for(int i = 0; i < size;i++) {
+            deck.deal();
         }
+
+        System.out.println("Deck Empty: " + deck.isEmpty());
     }
 }
